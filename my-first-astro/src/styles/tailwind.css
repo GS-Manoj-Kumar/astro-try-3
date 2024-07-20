@@ -1,0 +1,14 @@
+/* src/styles/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inside-body-text {
+    @apply sm:text-xs lg:text-sm xl:text-base leading-tight;
+  }
+.head-text {
+    @apply max-sm:text-2xl sm:text-3xl lg:text-4xl
+  }
+.head2-text {
+    @apply max-sm:text-xl sm:text-2xl lg:text-3xl
+  }

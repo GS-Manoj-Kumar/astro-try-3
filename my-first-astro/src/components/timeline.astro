@@ -1,0 +1,152 @@
+
+
+
+<!-- ---
+
+
+const steps = [
+  { id: 'step1', text: 'Meet Us', img: '../assets/hero/bg.jpg' },
+  { id: 'step2', text: 'Finalise', img: '../assets/hero/bg.jpg' },
+  { id: 'step3', text: 'Production', img: '../assets/hero/bg.jpg' },
+  { id: 'step4', text: 'Installation', img: '../assets/hero/bg.jpg' },
+  { id: 'step5', text: 'Handover', img: '../assets/hero/bg.jpg' }
+];
+
+--- -->
+
+
+
+<section id="timeline" class="p bg-red-100 h-svh w-full  flex flex-col items-center justify-center">
+
+ 
+
+
+
+
+  <div class="w-full min-h-full max-w-6xl mx-auto bg-red-100 p-8 rounded-lg ">
+    <div class="bg-red-00 col-span-8 row-span-2 col-start-1 row-start-2  w-full p-6 ">
+      <div class=" head-text mt-7 ">
+        <h1 class="text-center font-extrabold leading-snug ">Our Process </h1>
+        <h2 class="text-center head2-text">There are many variations of the passages  
+        </h2>
+      </div>
+    </div>
+    <div id="carousel-section" class="flex flex-col sm:flex-row items-center gap-3" >
+      
+      <div class="w-full h-full md:w-1/2 mt-4 md:mt-0 md:ml-4 order-2 sm:order-1">
+        <h2 class="text-2xl font-bold">Our Commitment to Beautiful Home</h2>
+        <p class="text-gray-600">Experience Exceptional Home Interiors</p>
+        <ul class="hidden sm:block list-decimal list-inside">
+          <li>Meet</li>
+          <li>Design</li>
+          <li>Production</li>
+          <li>Installation</li>
+          <li>Handover</li>
+        </ul>
+        <div id="steps" class="flex justify-evenly mt-4 bg-red-300 rounded-badge ">
+          <button class="step w-8 h-8 rounded-full bg-red-400 text-center" data-step="step1">1</button>
+          <button class="step w-8 h-8 rounded-full bg-red-400 text-center" data-step="step2">2</button>
+          <button class="step w-8 h-8 rounded-full bg-red-400 text-center" data-step="step3">3</button>
+          <button class="step w-8 h-8 rounded-full bg-red-400 text-center" data-step="step4">4</button>
+          <button class="step w-8 h-8 rounded-full bg-red-400 text-center" data-step="step5">5</button>
+        </div>
+      </div>
+      
+      <div class="w-full  md:w-1/2 order-1 sm:order-2">
+        <div id="carousel" class="relative h-80 ">
+
+          <div id="step1" class="carousel-item active absolute inset-x-0 inset-y-4">
+            <h2 class="text-2xl font-bold text-center bg-red-400 text-white">Meet</h2>
+            <img src="https://via.placeholder.com/400x200?text=Meet+Us" alt="Meet Us" class="w-full h-full object-cover">
+          </div>
+
+          <div id="step2" class="carousel-item absolute  inset-x-0 inset-y-4">
+            <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Finalise</h2>
+            <img src="https://via.placeholder.com/400x200?text=Finalise" alt="Finalise" class="w-full h-full object-cover">
+          </div>
+
+          <div id="step3" class="carousel-item absolute inset-x-0 inset-y-4">
+            <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Production</h2>
+            <img src="https://via.placeholder.com/400x200?text=Production" alt="Production" class="w-full h-full object-cover">
+          </div>
+
+          <div id="step4" class="carousel-item absolute inset-x-0 inset-y-4">
+            <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Installation</h2>
+            <img src="https://via.placeholder.com/400x200?text=Installation" alt="Installation" class="w-full h-full object-cover">
+          </div>
+
+          <div id="step5" class="carousel-item absolute inset-x-0 inset-y-4">
+            <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Handover</h2>
+            <img src="https://via.placeholder.com/400x200?text=Handover" alt="Handover" class="w-full h-full object-cover">
+          </div>
+
+        </div>
+      </div>
+
+
+      
+    </div>
+  </div>
+  </section>
+
+  <style>
+    .carousel-item {
+      display: none;
+    }
+    .carousel-item.active {
+      display: block;
+    }
+    .step.active {
+      background-color: #dc2626; /* Tailwind's bg-gray-600 */
+      color: white;
+    }
+  </style>
+
+<script >
+  document.addEventListener('DOMContentLoaded', () => {
+    const steps = document.querySelectorAll('.step');
+    const items = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+    let interval;
+
+    const activateStep = (index) => {
+      steps.forEach(s => s.classList.remove('active'));
+      items.forEach(i => i.classList.remove('active'));
+      
+      steps[index].classList.add('active');
+      items[index].classList.add('active');
+    }
+
+    const startAutoplay = () => {
+      interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % steps.length;
+        activateStep(currentIndex);
+      }, 2000);
+    }
+
+    const stopAutoplay = () => {
+      clearInterval(interval);
+    }
+
+    steps.forEach((step, index) => {
+      step.addEventListener('mouseover', () => {
+        stopAutoplay();
+        activateStep(index);
+      });
+
+      step.addEventListener('click', () => {
+        stopAutoplay();
+        activateStep(index);
+      });
+
+      step.addEventListener('mouseout', () => {
+        startAutoplay();
+      });
+    });
+
+    activateStep(currentIndex);
+    startAutoplay();
+  });
+</script>
+
+  

@@ -1,0 +1,478 @@
+
+    <section>
+      <form action="/submit-form" method="post" class="">
+
+        <!-- unstyled personal info  -->
+<!-- 
+        <h1>contact us</h1>
+        
+        <p class="">will get in touch soon</p>
+
+        <fieldset>
+        <legend>Personal Information</legend>
+        
+        <div>
+          <label for="personname">Name:</label>
+          <input type="text" name="personname" id="personname" class=""/>
+        </div>
+    
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="9876543210" required>
+          <small>Format: enter 10 digit phone number</small>
+        </div>
+
+        <div>
+           <label for="email">Email Address:</label>
+           <input type="email" id="email" name="email" placeholder="example@example.com" required>
+           <small>Enter a valid email address</small>
+        </div>
+
+        <div>
+           <label for="pincode">Area Pin Code:</label>
+        <input type="text" id="pincode" name="pincode" pattern="[1-9][0-9]{5}" placeholder="123456" required>
+        <small>Enter a 6-digit pin code</small>
+        </div>
+
+      </fieldset> -->
+
+      <!-- styled personal indfo -->
+      <div class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">
+        <h1 class="text-2xl font-bold mb-4">Contact Us</h1>
+        <p class="mb-6">We will get in touch soon</p>
+
+        <fieldset class="border border-gray-300 p-4 rounded-md">
+            <legend class="text-lg font-semibold">Personal Information</legend>
+            
+            <div class="mb-4">
+                <label for="personname" class="block text-gray-700 font-bold mb-2">Name:</label>
+                <input type="text" name="personname" id="personname" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        
+            <div class="mb-4">
+                <label for="phone" class="block text-gray-700 font-bold mb-2">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="9876543210" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="pincode" class="block text-gray-700 font-bold mb-2">Area Pin Code:</label>
+                <input type="text" id="pincode" name="pincode" pattern="[1-9][0-9]{5}" placeholder="123456" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        </fieldset>
+      <!-- </div> -->
+      <!-- end of personal info section -->
+
+
+
+      <!-- unstyled option group one section -->
+      <!-- <div class="option-group1">
+      <label for="option1">TYPE OF PROJECT:</label>
+      <br><hr>
+          <input type="radio" id="movein" name="option1" value="movein" required>
+          <label for="movein">Move In</label>
+          
+          <input type="radio" id="rentout" name="option1" value="rentout" required>
+          <label for="rentout">Rent Out</label>
+        
+          <input type="radio" id="renovate" name="option1" value="renovate" required>
+          <label for="renovate">Renovate</label>
+
+
+          <br><hr>
+          <input type="radio" id="Apartment" name="option2" value="Apartment" required>
+          <label for="Apartment">Apartment</label>
+        
+          <input type="radio" id="Independent" name="option2" value="Independent" required>
+          <label for="Independent">Independent</label>
+        
+          <input type="radio" id="Villa" name="option2" value="Villa" required>
+          <label for="Villa">Villa</label>
+         
+          <input type="radio" id="Others" name="option2" value="Others" required>
+          <label for="Others">Others</label>
+          
+          <hr>
+      </div> -->
+
+      <!-- styled option group section -->
+      <fieldset class="border border-gray-300 p-4 rounded-md">
+        <legend class="text-lg font-semibold uppercasease">project type</legend>
+      <div class="max-w-lg mx-auto p-3 bg-white shadow-md rounded-md">
+        <div class="option-group1 mb-6">
+            <label for="option1" class="block text-gray-700 font-bold mb-2">TYPE OF PROJECT:</label>
+            <hr class="my-4 ">
+            <div class=" mb-4">
+              <div class=" flex mb-4 space-x-6">
+                <hr class="mb-4">
+                <div class="flex items-center mb-2">
+                    <input type="radio" id="movein" name="option1" value="movein" required class="mr-2">
+                    <label for="movein" class="text-gray-700">Move In</label>
+                </div>
+                <div class="flex items-center mb-2">
+                    <input type="radio" id="rentout" name="option1" value="rentout" required class="mr-2">
+                    <label for="rentout" class="text-gray-700">Rent Out</label>
+                </div>
+                <div class="flex items-center mb-2">
+                    <input type="radio" id="renovate" name="option1" value="renovate" required class="mr-2">
+                    <label for="renovate" class="text-gray-700">Renovate</label>
+                </div>
+              </div>
+              <hr class="my-4 ">
+
+              <div class=" flex mb-4 space-x-6 ">
+                
+                <div class="flex items-center mb-2">
+                    <input type="radio" id="Apartment" name="option2" value="Apartment" required class="mr-2">
+                    <label for="Apartment" class="text-gray-700">Apartment</label>
+                </div>
+                <div class="flex items-center mb-2">
+                    <input type="radio" id="Independent" name="option2" value="Independent" required class="mr-2">
+                    <label for="Independent" class="text-gray-700">Independent</label>
+                </div>
+                <div class="flex items-center mb-2">
+                    <input type="radio" id="Villa" name="option2" value="Villa" required class="mr-2">
+                    <label for="Villa" class="text-gray-700">Villa</label>
+                </div>
+                <div class="flex items-center mb-2">
+                    <input type="radio" id="Others" name="option2" value="Others" required class="mr-2">
+                    <label for="Others" class="text-gray-700">Others</label>
+                </div>
+              </div>
+                <hr class="mt-4">
+            </div>
+        </div>
+    </div>
+    <!-- end of styled option group section  -->
+          
+      <!-- trial of carpet area -->
+
+
+<!-- 
+      <div class="option-group2">
+   
+        <label><input type="radio" name="areaSelection" value="carpetarea" checked onclick="handleRadioClick()"> Carpet Area (sqft)</label>
+        <label><input type="radio" name="areaSelection" value="dontknow" onclick="handleRadioClick()"> Don't Know Carpet Area</label>
+        
+        <div class="value-input" id="carpetAreaInput">
+            <label for="carpetAreaValue">Enter Carpet Area (sqft):</label>
+            <input type="range" id="area" name="area" min="150" max="5000" step="10" value="150" oninput="updateAreaValue(this.value)" >
+          <div class="value-output">
+            <input type="text" id="areaValue" name="areaValue" value="150 sqft" readonly>
+          </div>
+        </div>
+        
+      </div>
+      <hr>
+
+      <div>
+        <label for="startDate">Start Date:</label>
+        <select id="startDate" name="startDate">
+            <option value="immediately">Immediately</option>
+            <option value="within1month">Within 1 month</option>
+            <option value="within2months">Within 2 months</option>
+            <option value="within3months">Within 3 months</option>
+            <option value="morethan3months">More than 3 months</option>
+        </select>
+        <br><hr>
+        <label for="budget">Budget:</label>
+        <select id="budget" name="budget">
+            <option value="2-7lacs">2 - 7 lacs</option>
+            <option value="7-15lacs">7 - 15 lacs</option>
+            <option value="15above">15 lacs and above</option>
+        </select>
+      </div> -->
+      <!-- styled carpet area section -->
+
+      <div class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">
+        <div class="option-group2 mb-6">
+            <label class="block text-gray-700 font-bold mb-2">Carpet Area:</label>
+            <div class="flex items-center mb-2">
+                <input type="radio" id="carpetarea" name="areaSelection" value="carpetarea" checked onclick="handleRadioClick()" class="mr-2">
+                <label for="carpetarea" class="text-gray-700">Carpet Area (sqft)</label>
+            </div>
+            <div class="flex items-center mb-2">
+                <input type="radio" id="dontknow" name="areaSelection" value="dontknow" onclick="handleRadioClick()" class="mr-2">
+                <label for="dontknow" class="text-gray-700">Don't Know Carpet Area</label>
+            </div>
+            <div class="value-input mb-4" id="carpetAreaInput">
+                <label for="carpetAreaValue" class="block text-gray-700 font-bold mb-2">Enter Carpet Area (sqft):</label>
+                <input type="range" id="area" name="area" min="150" max="5000" step="10" value="150" oninput="updateAreaValue(this.value)" class="w-full">
+                <div class="value-output mt-2">
+                    <input type="text" id="areaValue" name="areaValue" value="150 sqft" readonly class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="mb-6">
+            <label for="startDate" class="block text-gray-700 font-bold mb-2">Start Date:</label>
+            <select id="startDate" name="startDate" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+                <option value="immediately">Immediately</option>
+                <option value="within1month">Within 1 month</option>
+                <option value="within2months">Within 2 months</option>
+                <option value="within3months">Within 3 months</option>
+                <option value="morethan3months">More than 3 months</option>
+            </select>
+            <label for="budget" class="block text-gray-700 font-bold mb-2">Budget:</label>
+            <select id="budget" name="budget" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="2-7lacs">2 - 7 lacs</option>
+                <option value="7-15lacs">7 - 15 lacs</option>
+                <option value="15above">15 lacs and above</option>
+            </select>
+        </div>
+     </div>
+      </fieldset>
+     <!-- end of styled carpet area section -->
+
+
+
+     <!-- un styled layout/pitcher section -->
+      <!-- <div>
+        <br><hr>
+        <label for="layoutDrawing">Upload 2D Layout Drawing:</label>
+        <input type="file" id="layoutDrawing" name="layoutDrawing" accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf">
+
+        <label for="cameraInput">Take Picture:</label>
+        <input type="file" id="cameraInput" name="cameraInput" accept="image/*" capture="camera">
+
+      </div>
+      <br><hr>
+
+      <div>
+        <div class="room">
+          <label for="bathrooms">Bathrooms:</label>
+          <div class="counter">
+              <button type="button" onclick="decrement('bathrooms')">-</button>
+              <input type="text" id="bathrooms" name="bathrooms" value="0" readonly>
+              <button type="button" onclick="increment('bathrooms')">+</button>
+          </div>
+      </div>
+      <div class="room">
+          <label for="bedrooms">Bedrooms:</label>
+          <div class="counter">
+              <button type="button" onclick="decrement('bedrooms')">-</button>
+              <input type="text" id="bedrooms" name="bedrooms" value="0" readonly>
+              <button type="button" onclick="increment('bedrooms')">+</button>
+          </div>
+      </div>
+      <div class="room">
+          <label for="kitchens">Kitchens:</label>
+          <div class="counter">
+              <button type="button" onclick="decrement('kitchens')">-</button>
+              <input type="text" id="kitchens" name="kitchens" value="0" readonly>
+              <button type="button" onclick="increment('kitchens')">+</button>
+          </div>
+      </div>
+      <div class="room">
+          <label for="livingRooms">Living Rooms:</label>
+          <div class="counter">
+              <button type="button" onclick="decrement('livingRooms')">-</button>
+              <input type="text" id="livingRooms" name="livingRooms" value="0" readonly>
+              <button type="button" onclick="increment('livingRooms')">+</button>
+          </div>
+      </div>
+      </div> -->
+
+
+<!-- 
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Do you have a layout?</label>
+        <div class="flex items-center space-x-4">
+            <div>
+                <input type="radio" id="hasLayout" name="layoutOption" value="yes" onclick="toggleLayoutOption(true)" class="mr-2">
+                <label for="hasLayout" class="text-gray-700">Yes</label>
+            </div>
+            <div>
+                <input type="radio" id="noLayout" name="layoutOption" value="no" onclick="toggleLayoutOption(false)" class="mr-2">
+                <label for="noLayout" class="text-gray-700">No</label>
+            </div>
+        </div>
+      </div>
+    
+    <div id="layoutUpload" class="hidden mb-4">
+        <label for="layoutDrawing" class="block text-gray-700 font-bold mb-2">Upload 2D Layout Drawing:</label>
+        <input type="file" id="layoutDrawing" name="layoutDrawing" accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf" class="block w-full px-3 py-2 mb-4 border rounded-md text-gray-700">
+
+        <label for="cameraInput" class="block text-gray-700 font-bold mb-2">Take Picture:</label>
+        <input type="file" id="cameraInput" name="cameraInput" accept="image/*" capture="camera" class="block w-full px-3 py-2 border rounded-md text-gray-700">
+    </div>
+
+    <div id="roomCounters" class="hidden mb-4">
+        <div class="mb-4">
+            <label for="bathrooms" class="block text-gray-700 font-bold mb-2">Bathrooms:</label>
+            <div class="flex items-center">
+                <button type="button" onclick="decrement('bathrooms')" class="bg-green-500 text-white rounded-md px-2 py-1">-</button>
+                <input type="text" id="bathrooms" name="bathrooms" value="0" readonly class="mx-2 w-12 text-center border rounded-md">
+                <button type="button" onclick="increment('bathrooms')" class="bg-green-500 text-white rounded-md px-2 py-1">+</button>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label for="bedrooms" class="block text-gray-700 font-bold mb-2">Bedrooms:</label>
+            <div class="flex items-center">
+                <button type="button" onclick="decrement('bedrooms')" class="bg-green-500 text-white rounded-md px-2 py-1">-</button>
+                <input type="text" id="bedrooms" name="bedrooms" value="0" readonly class="mx-2 w-12 text-center border rounded-md">
+                <button type="button" onclick="increment('bedrooms')" class="bg-green-500 text-white rounded-md px-2 py-1">+</button>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label for="kitchens" class="block text-gray-700 font-bold mb-2">Kitchens:</label>
+            <div class="flex items-center">
+                <button type="button" onclick="decrement('kitchens')" class="bg-green-500 text-white rounded-md px-2 py-1">-</button>
+                <input type="text" id="kitchens" name="kitchens" value="0" readonly class="mx-2 w-12 text-center border rounded-md">
+                <button type="button" onclick="increment('kitchens')" class="bg-green-500 text-white rounded-md px-2 py-1">+</button>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label for="livingRooms" class="block text-gray-700 font-bold mb-2">Living Rooms:</label>
+            <div class="flex items-center">
+                <button type="button" onclick="decrement('livingRooms')" class="bg-green-500 text-white rounded-md px-2 py-1">-</button>
+                <input type="text" id="livingRooms" name="livingRooms" value="0" readonly class="mx-2 w-12 text-center border rounded-md">
+                <button type="button" onclick="increment('livingRooms')" class="bg-green-500 text-white rounded-md px-2 py-1">+</button>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-700">Submit</button>
+ -->
+
+ <!-- styled layout section -->
+ <fieldset class="border border-gray-300 p-4 rounded-md ">
+    <legend class="text-lg font-semibold uppercase">layout</legend>
+ <div class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">
+  <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2">Do you have a layout?</label>
+      <div class="flex items-center space-x-4">
+          <div>
+              <input type="radio" id="hasLayout" name="layoutOption" value="yes" onclick="toggleLayoutOption(true)" class="mr-2">
+              <label for="hasLayout" class="text-gray-700">Yes</label>
+          </div>
+          <div>
+              <input type="radio" id="noLayout" name="layoutOption" value="no" onclick="toggleLayoutOption(false)" class="mr-2">
+              <label for="noLayout" class="text-gray-700">No</label>
+          </div>
+      </div>
+  </div>
+
+  <div id="layoutUpload" class="hidden mb-4">
+      <label for="layoutDrawing" class="block text-gray-700 font-bold mb-2">Upload 2D Layout Drawing:</label>
+      <input type="file" id="layoutDrawing" name="layoutDrawing" accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf" class="block w-full px-3 py-2 mb-4 border rounded-md text-gray-700">
+
+      <label for="cameraInput" class="block text-gray-700 font-bold mb-2">Take Picture:</label>
+      <input type="file" id="cameraInput" name="cameraInput" accept="image/*" capture="camera" class="block w-full px-3 py-2 border rounded-md text-gray-700">
+  </div>
+
+  <div id="roomCounters" class="hidden mb-4">
+      <div class="mb-4">
+          <label for="bathrooms" class="block text-gray-700 font-bold mb-2">Bathrooms:</label>
+          <div class="flex items-center">
+              <button type="button" onclick="decrement('bathrooms')" class="bg-green-500 text-white rounded-md px-2 py-1">-</button>
+              <input type="text" id="bathrooms" name="bathrooms" value="0" readonly class="mx-2 w-12 text-center border rounded-md">
+              <button type="button" onclick="increment('bathrooms')" class="bg-green-500 text-white rounded-md px-2 py-1">+</button>
+          </div>
+      </div>
+      <div class="mb-4">
+          <label for="bedrooms" class="block text-gray-700 font-bold mb-2">Bedrooms:</label>
+          <div class="flex items-center">
+              <button type="button" onclick="decrement('bedrooms')" class="bg-green-500 text-white rounded-md px-2 py-1">-</button>
+              <input type="text" id="bedrooms" name="bedrooms" value="0" readonly class="mx-2 w-12 text-center border rounded-md">
+              <button type="button" onclick="increment('bedrooms')" class="bg-green-500 text-white rounded-md px-2 py-1">+</button>
+          </div>
+      </div>
+      <div class="mb-4">
+          <label for="kitchens" class="block text-gray-700 font-bold mb-2">Kitchens:</label>
+          <div class="flex items-center">
+              <button type="button" onclick="decrement('kitchens')" class="bg-green-500 text-white rounded-md px-2 py-1">-</button>
+              <input type="text" id="kitchens" name="kitchens" value="0" readonly class="mx-2 w-12 text-center border rounded-md">
+              <button type="button" onclick="increment('kitchens')" class="bg-green-500 text-white rounded-md px-2 py-1">+</button>
+          </div>
+      </div>
+      <div class="mb-4">
+          <label for="livingRooms" class="block text-gray-700 font-bold mb-2">Living Rooms:</label>
+          <div class="flex items-center">
+              <button type="button" onclick="decrement('livingRooms')" class="bg-green-500 text-white rounded-md px-2 py-1">-</button>
+              <input type="text" id="livingRooms" name="livingRooms" value="0" readonly class="mx-2 w-12 text-center border rounded-md">
+              <button type="button" onclick="increment('livingRooms')" class="bg-green-500 text-white rounded-md px-2 py-1">+</button>
+          </div>
+      </div>
+  </div>
+</fieldset>
+
+  <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-700">Submit</button>
+</div>
+</div>
+
+<!-- end of styled layout section -->
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </form>
+    </section>
+
+
+    <script>
+      // @ts-nocheck
+      function updateAreaValue(value) {
+          const maxArea = 5000;
+          const displayValue = value >= maxArea ? `${maxArea} sqft and above` : `${value} sqft`;
+          document.getElementById('areaValue').value = displayValue;
+
+      }
+      function handleRadioClick() {
+            const carpetAreaInput = document.getElementById('carpetAreaInput');
+            const carpetAreaRadio = document.querySelector('input[name="areaSelection"][value="carpetarea"]');
+            
+            if (carpetAreaRadio.checked) {
+                carpetAreaInput.style.display = 'block';
+            } else {
+                carpetAreaInput.style.display = 'none';
+                document.getElementById('carpetAreaValue').value = ''; // Clear input value if hidden
+            }
+        }
+
+        function increment(id) {
+            const input = document.getElementById(id);
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decrement(id) {
+            const input = document.getElementById(id);
+            if (parseInt(input.value) > 0) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        function toggleLayoutOption(hasLayout) {
+            const layoutUpload = document.getElementById('layoutUpload');
+            const roomCounters = document.getElementById('roomCounters');
+
+            if (hasLayout) {
+                layoutUpload.classList.remove('hidden');
+                roomCounters.classList.add('hidden');
+            } else {
+                layoutUpload.classList.add('hidden');
+                roomCounters.classList.remove('hidden');
+            }
+        }
+
+  </script>
+
+

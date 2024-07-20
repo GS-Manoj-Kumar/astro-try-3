@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+ content: string;
+ 
+ 
+}
+
+const { title, content} = Astro.props as Props;
+---
+
+
+
+<details class="collapse collapse-arrow bg-zinc-300 ">
+
+   <summary class="collapse-title text-xl font-medium bg-red-400 text-white inside-body-text">{title}</summary>
+    <div class="collapse-content bg-red-200 inside-body-text">
+      <p>{content}</p>
+    </div>
+  
+</details>

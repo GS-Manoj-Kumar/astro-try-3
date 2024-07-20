@@ -1,0 +1,39 @@
+---
+// src/components/NavBar.astro
+
+
+import Modal from '../components/modal/modal1.astro';
+
+---
+
+<div class="flex items-center justify-between w-full compact sticky top-0  z-20 bg-red-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-60 border border-gray-100 drop-shadow-lg  ">
+  <div class="navbar-start ">
+    <details class=" md:hidden  dropdown [&[open]_.swap-off]:opacity-100 [&[open]_.swap-on]:opacity-0 [&_.swap-off]:opacity-0 [&_.swap-on]:opacity-100">
+      <summary class="btn btn-square compact swap m-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="swap-off h-5 w-5">
+          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="swap-on h-5 w-5">
+          <path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+        </svg>
+      </summary>
+      <ul class="dropdown-content menu z-[1] w-52 rounded-box bg-base-200 p-2">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+      </ul>
+    </details>
+
+    <a class="btn btn-ghost md:text-md text-xl">vidr</a>
+  </div>
+
+  <div class="navbar-center hidden md:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a>Item 1</a></li>
+      <li><a>Item 2</a></li>
+    </ul>
+  </div>
+
+  <div class="mr-4 justify-self-end">
+    <div id="" class=""><Modal/></div>
+  </div>
+</div>

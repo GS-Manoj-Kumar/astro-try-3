@@ -1,0 +1,75 @@
+---
+import FORM from "../common/simpleform.astro"
+
+---
+
+
+
+
+<button id="openModalBtn" class="px-4 py-2 bg-red-500 text-white rounded z-50 font-bold text-md ">Get Free Estimate!</button>
+
+    <!-- Modal -->
+    <dialog id="myModal" class="p-0 rounded-lg md:shadow-lg md:w-2/3  max-w-full max-h-fit bg-rose-300 ">
+        <div class=" hidden md:flex md:flex-row ">
+
+            <div class="w-1/2 text-left">
+                <img src="/src/assets/modal/modalsvg.svg" alt="Modal Image" class="fill-none scale-90">
+            </div>
+            
+            
+            <div class="relative  w-1/2  ">
+                <FORM />
+                <button id="closeModalBtn" class=" aspect-square w-8 h-8  bg-red-500 text-white rounded absolute -top-0 -right-0 ">X</button>
+            </div>
+
+
+
+        </div>
+        
+        
+        <div class="hidden max-md:block relative scale-90 bg-rose-300 w-full ">
+            <FORM />
+            <button id="closeModalBtnmobo" class=" aspect-square w-6 h-6 bg-red-500 text-white rounded absolute -top-7 -right-4 z-50">X</button>
+        </div>
+           
+        
+    </dialog>
+
+    <script>
+       // @ts-nocheck
+        // Get the modal element
+        const modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        const openModalBtn = document.getElementById('openModalBtn');
+        const openModalBtnMobile = document.getElementById('openModalBtnMobile');
+
+        // Get the button that closes the modal
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const closeModalBtnmob = document.getElementById('closeModalBtnmobo');
+
+        // When the user clicks the button, open the modal
+        openModalBtn.addEventListener('click', () => {
+            modal.showModal();
+        });
+        openModalBtnMobile.addEventListener('click', () => {
+        modal.showModal();
+        });
+     
+
+        // When the user clicks the button, close the modal
+        closeModalBtn.addEventListener('click', () => {
+            modal.close();
+        });
+        closeModalBtnmob.addEventListener('touchstart', () => {
+            modal.close();
+        });
+
+        // When the user clicks outside the modal, close it
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.close();
+                // modal.hidePopover();
+            }
+        });
+    </script>

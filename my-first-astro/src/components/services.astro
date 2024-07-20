@@ -1,0 +1,77 @@
+---
+// src/components/ServicesSection.astro
+
+import Card from './cards/services_card.astro';
+import { Image } from 'astro:assets';
+import bedroomSvgSrc from '../assets/services/rectangle-xmark.png';
+import { createAnimationScope } from 'astro:transitions';
+
+const titlebg1 = "bg-red-300"
+const titlebg2 = "bg-red-300"
+const titlebg3 = "bg-red-300"
+const titlebg4 = "bg-red-300"
+const titlebg5 = "bg-red-300"
+const titlebg6 = "bg-red-300"
+
+const bedroomItems = ["Wardrobe", "Study", "Dressing unit", "TV unit", "Storage unit"];
+const livingItems = ["Tvunit", "Pooja", "Foyr", "Crokery", "Balcony"];
+const furnitureItems = ["Sofa", "Lounge", "Beds", "Dining set", "wooden chairs"];
+const decorItems = ["wall panelling", "wall paper", "walll art", "archi lights"];
+const kitchenItems = ["straight", "L-shape", "parallel", "island", "peninsular"];
+const civilItems = ["electrical", "painting", "plumbing", "false ceiling", "demolition","reconstruction","flooring"];
+
+
+---
+
+<section id="services" class="min-h-svh max-w-6xl container mx-auto bg-zinc-20 sm:h-svh ">
+ 
+   <div class=" hidden sm:grid sm:grid-cols-12 sm:grid-rows-12 sm:gap-1 sm:h-full sm:p-2 sm:w-full p-4 ">
+    <div class="bg-red-300 col-span-8 row-span-2 col-start-1 row-start-2 rounded-badge">
+      <div class=" head-text ml-10 ">
+        <h1 class="text-left font-extrabold leading-snug ">What Services we Offer </h1>
+        <h2 class="text-left head2-text">There are many variations of the passages  
+        </h2>
+      </div>
+    </div>
+    <div class="bg-orange-20 col-span-4 row-span-4 col-start-1 row-start-4 border-2 border-gray-400 rounded-badge  "> 
+      <Card title="BEDROOM" items={bedroomItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg1} />
+    </div>
+    <div class="bg-green-20 col-span-4 row-span-4 col-start-5 row-start-4 border-2 border-gray-400 rounded-badge">
+      <Card title="LIVING" items={livingItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg2}/>
+    </div>
+    <div class="bg-red-20 col-span-4 row-span-4 col-start-1 row-start-8 border-2 border-gray-400 rounded-badge">
+      <Card title="FURNITURE" items={furnitureItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg3}/>
+    </div>
+    <div class="bg-yellow-20 col-span-4 row-span-4 col-start-5 row-start-8 border-2 border-gray-400 rounded-badge">
+      <Card title="DECOR" items={decorItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg4}/>
+    </div>
+    <div class="bg-fuchsia-20 col-span-4 row-span-5 col-start-9 row-start-2 border-2 border-gray-400 rounded-badge">
+      <Card title="KITCHEN" items={kitchenItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg5}/>
+    </div>
+    <div class="bg-blue-20 col-span-4 row-span-5 col-start-9 row-start-7 rounded-badge border-2 border-gray-400">
+      <Card title="CIVIL WORKS" items={civilItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg6}/>
+    </div>
+  </div>
+    
+
+  <div class="hidden max-sm:flex max-sm:flex-col max-sm: max-sm:gap-1 max-sm:h-full max-sm:p-1 max-sm:w-full p-4">
+    <div class=" bg-red-400 rounded-sm p-2">
+      <div class="text-left">
+        <h1 class="uppercase text-xl font-bold text-white">Our Commitment to Beautiful Home</h1>
+        <p class="text-white">There are many variations of the passages of lorem Ipsum from available, majority.
+        </p>
+      </div>
+    </div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="BEDROOM" items={bedroomItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg1} /></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge "><Card title="LIVING" items={livingItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg2}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="FURNITURE" items={furnitureItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg3}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="DECOR" items={decorItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg4}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="KITCHEN" items={kitchenItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg5}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="CIVIL WORKS" items={civilItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg6}/></div>
+  </div>
+  
+
+
+
+  </section>
+  

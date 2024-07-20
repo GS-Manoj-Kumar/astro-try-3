@@ -1,0 +1,48 @@
+---
+// src/pages/index.astro
+import '../styles/tailwind.css';
+import HeroSection from '../components/hero.astro';
+import HerotestSection from '../components/herotest.astro';
+import NavBar from '../components/navbar.astro';
+import FeaturesSection from '../components/features.astro';
+import TimelineSection from '../components/timeline.astro';
+import Timelinetest from '../components/timeline_test.astro';
+import ServicesSection from '../components/services.astro';
+import TestimonialsSection from '../components/testimonial.astro';
+import PricingSection from '../components/pricing.astro';
+import FAQSection from '../components/faq.astro';
+import FooterSection from '../components/footer.astro';
+import FormSection from '../components/common/simpleform.astro';
+import Modal from '../components/modal/modal1.astro';
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+   
+      <NavBar />
+    
+      <HeroSection />
+      <!-- <HerotestSection /> -->
+  
+   
+
+    <FeaturesSection />
+    
+  
+    <TimelineSection />
+    <Timelinetest />
+    <ServicesSection />
+    <TestimonialsSection />
+    <!-- <PricingSection /> -->
+    <FAQSection />
+    <FooterSection />
+    <!-- <FormSection /> -->
+    <!-- <Modal /> -->
+  </body>
+</html>

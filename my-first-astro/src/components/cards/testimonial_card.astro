@@ -1,0 +1,28 @@
+---
+
+
+const { name, title, Content , image ,personimage } = Astro.props ;
+---
+    
+    <div class="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-red-200 rounded-badge flex flex-col leading-normal overflow-clip">
+        <img src={image}class="w-full ">
+        
+    
+             <p class="bg-red-00 align-baseline grow text-black text-left p-4 max-md:prose-xs md:prose-sm lg:prose-sm ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam </p>
+  
+  
+            <div class="flex bg-red-00 gap-2 rounded p-4 items-center ">
+  
+              <div class=" w-12 h-12 relative border-1 border-white rounded-full overflow-hidden ml-2">
+                  <img class="object-cover  h-12 w-12" src={personimage} alt='Woman looking front'>
+              </div>
+        
+              <div class="text-center  ">
+                <p class="text-left text-black inside-body-text font-semibold ">{name}</p>
+                <p class="text-left text-black inside-body-text font-normal ">{title}</p>
+              </div>
+  
+            </div>
+      
+    </div>
+  
