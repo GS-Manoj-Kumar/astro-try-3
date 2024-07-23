@@ -1,59 +1,14 @@
 ---
 // src/components/HeroSection.astro
-import NavBar from '../components/navbar.astro';
-import FormSection from '../components/common/simpleform.astro';
+// import NavBar from '../components/navbar.astro';
+import FORM from '../components/common/form_to_googlesheet.astro';
 import Defaultimg from '../assets/work/01.png';
-import Modal from '../components/modal/modal1.astro';
+// import Modal from '../components/modal/modal1.astro';
 import Modal1 from '../components/modal/modal1.astro';
+// import Modal1 from '../components/modal/modal1.astro';
 
 ---
 
-<!-- <section class="w-full h-svh ">
-  
-  
-
-  <div class="grid grid-cols-12 grid-rows-12 gap-0  h-full w-full">
-   
-    <div class="col-span-12 row-span-1 col-start-1 row-start-1 sticky top-0  flex items-center  z-20 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-60 border border-gray-100 drop-shadow-lg">
-      <NavBar />
-    </div>
-
-    <div class="row-start-2 col-start-1 row-span-11 col-span-9 bg-gray-500 overflow-clip rounded-r-[6rem] border border-gray-100">
-      <img src="https://picsum.photos/id/3/3000" alt="" class="object-cover w-full h-full ">
-    </div>
-
-    <div class=" col-start-10 row-span-11 col-span-3 row-start-2 rounded-l-[6rem] z-10  bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-70 border border-gray-300 drop-shadow-lg">
-
-    </div>
-
-  </div>
-</section> -->
-<!-- 
-  
-<section class="w-full h-svh ">
-  
-  <div class="grid grid-cols-12 grid-rows-12 h-hero w-full mt-1">
-
-    <div class="bg-zinc-800 row-span-12 col-span-9 rounded-r-[6rem] h-full row-start-1 col-start-1 overflow-clip">
-
-        <img src="https://picsum.photos/id/3/3000" alt="" class="object-cover w-full h-full ">
-   
-
-    </div>
-
-    <div class=" col-start-10 row-span-12 col-span-3 row-start-1 rounded-l-[6rem] overflow-clip bg-red-200 ">
-    
-      <div class=" flex w-full h-full z-10  rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-70 border border-gray-30 drop-shadow-lg items-center justify-center">
-      <FormSection />
-    </div>
-      
-
-   </div>
-
-
-
-  </div>
-</section> -->
 
 <section class="bg-zinc-00 h-hero w-full">
   <div class="hidden md:grid md:grid-cols-12 md:grid-rows-12 md:h-full md:w-full bg-slate-00">
@@ -63,9 +18,11 @@ import Modal1 from '../components/modal/modal1.astro';
 
     </div>
 
-    <div class="row-start-1 col-start-10 col-span-3 row-span-12 rounded-l-[6rem]  bg-red-200" id="form_section">
+    <div class="z-10 row-start-1 col-start-10 col-span-3 row-span-12 rounded-l-[6rem]  bg-red-200" id="">
       <div class=" flex w-full h-full z-10 rounded-l-[6rem]  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-70 border border-gray-300 drop-shadow-lg items-center justify-center">
-        <FormSection />
+        <FORM formId="hero-form" />
+
+
       </div>
       
     </div>
@@ -103,7 +60,7 @@ DESIGNERS IN BANGALORE</h4>
     </div>
   
      <div class="col-span-12 row-span-1 col-start-1 row-start-12 bg-slate-00" id="   ">
-      <div id="openModalBtnMobile" class=" px-4 py-2 bg-red-500 text-white mb-2 w-full h-full text-center rounded-full "><Modal/>
+      <div id="openModalBtnMobile" class=" px-4 py-2 bg-red-500 text-white mb-2 w-full h-full text-center rounded-full "><Modal1/>
    
       </div>
       
@@ -151,11 +108,16 @@ DESIGNERS IN BANGALORE</h4>
 <!-- <script type="application/x-javascript">document.addEventListener('touchmove', function(e){e.preventDefault();}, false);</script> -->
 
 <script>
+
   //@ts-nocheck
  import Conceptimg from '../assets/work/06.png';
  import Drawingimg from '../assets/work/05.png';
  import Renderimg from '../assets/work/03.png';
 import Modal1 from './modal/modal1.astro';
+import Form from '../components/common/form_to_googlesheet.astro';
+import Modal from '../components/modal/modal1.astro';
+
+
 
  // This script runs after the component is rendered
  const myImg = document.querySelector('#myImg');

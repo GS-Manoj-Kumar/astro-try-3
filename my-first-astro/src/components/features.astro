@@ -1,5 +1,6 @@
+
 ---
-// src/components/FeaturesSection.astro
+import DualSectionProjectCard from '../components/cards/feature_card.astro';
 ---
 
 <section id="features" class="md:h-svh max-w-6xl  min-h-svh container mx-auto ">
@@ -10,15 +11,15 @@
       </h2>
     </div>
 
-    <div class="flex flex-col items-center md:flex md:flex-row md:justify-between  md:items-center  h-full w-full overflow-x-auto">
-
+    <div class="flex flex-col items-center md:flex md:flex-row md:justify-center  md:items-center  h-full w-full overflow-x-auto">
+<!-- 
         <div class=" max-w-xs m-2 bg-gray-100 rounded-xl shadow-md md:max-w-xs border-x-2 border-gray-400 ">
           <div class="p-4 ">
         
             <div class="flex flex-col items-center ">
         
               <div class="bg-red-600 rounded-full p-4 m-2">
-                <!-- Replace this with your icon -->
+             
                <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm1 10h3m-6 4h.01M12 6.75v6.25" />
                 </svg>
@@ -36,7 +37,7 @@
             
             <div class="flex flex-col items-center">
               <div class="bg-red-600 rounded-full p-4 mb-4">
-                <!-- Replace this with your icon -->
+        
                 <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm1 10h3m-6 4h.01M12 6.75v6.25" />
                 </svg>
@@ -47,87 +48,40 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
         
-        <div class=" max-w-xs m-2 bg-gray-100 rounded-xl shadow-md md:max-w-xs border-x-2 border-gray-400 ">
-          <div class="p-4 ">
         
-            <div class="flex flex-col items-center ">
-        
-              <div class="bg-red-600 rounded-full p-4 m-2">
-                <!-- Replace this with your icon -->
-               <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm1 10h3m-6 4h.01M12 6.75v6.25" />
-                </svg>
-              </div>
-        
-              <h3 class="text-center text-lg font-semibold">Project Planning</h3>
-        
-              <p class="text-center mt-2  text-gray-600 inside-body-text">
-               There are many variations of the passages of lorem Ipsum from available, majority.
-              </p>
-        
-            </div>
-            
-            <div class="border-t-2 border-gray-300 my-4"></div>
-            
-            <div class="flex flex-col items-center">
-              <div class="bg-red-600 rounded-full p-4 mb-4">
-                <!-- Replace this with your icon -->
-                <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm1 10h3m-6 4h.01M12 6.75v6.25" />
-                </svg>
-              </div>
-              <h3 class="text-center text-lg font-semibold">Project Planning</h3>
-              <p class="text-center mt-2 text-gray-600 inside-body-text">
-                There are many variations of the passages of lorem Ipsum from available, majority.
-              </p>
-            </div>
-          </div>
-        </div>
 
 
 
+        <DualSectionProjectCard
+        title1="Planning"
+        description1=" There are many variations of the passages of lorem Ipsum from available, majority."
+        icon1="<path d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01' />"
+        title2="Execution"
+        description2=" There are many variations of the passages of lorem Ipsum from available, majority."
+        icon2="<path d='M13 10V3L4 14h7v7l9-11h-7z' />"
+      />
 
-        <div class=" max-w-xs m-2 bg-gray-100 rounded-xl shadow-md md:max-w-xs border-x-2 border-gray-400 ">
-          <div class="p-4 ">
-        
-            <div class="flex flex-col items-center ">
-        
-              <div class="bg-red-600 rounded-full p-4 m-2">
-                <!-- Replace this with your icon -->
-               <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm1 10h3m-6 4h.01M12 6.75v6.25" />
-                </svg>
-              </div>
-        
-              <h3 class="text-center text-lg font-semibold">Project Planning</h3>
-        
-              <p class="text-center mt-2  text-gray-600 inside-body-text">
-               There are many variations of the passages of lorem Ipsum from available, majority.
-              </p>
-        
-            </div>
-            
-            <div class="border-t-2 border-gray-300 my-4"></div>
-            
-            <div class="flex flex-col items-center">
-              <div class="bg-red-600 rounded-full p-4 mb-4">
-                <!-- Replace this with your icon -->
-                <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm1 10h3m-6 4h.01M12 6.75v6.25" />
-                </svg>
-              </div>
-              <h3 class="text-center text-lg font-semibold">Project Planning</h3>
-              <p class="text-center mt-2 text-gray-600 inside-body-text">
-                There are many variations of the passages of lorem Ipsum from available, majority.
-              </p>
-            </div>
-          </div>
-        </div>
-      
+        <DualSectionProjectCard
+        title1="Planning"
+        description1="There are many variations of the passages of lorem Ipsum from available, majority."
+        icon1="<path d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01' />"
+        title2="Execution"
+        description2=" There are many variations of the passages of lorem Ipsum from available, majority."
+        icon2="<path d='M13 10V3L4 14h7v7l9-11h-7z' />"
+      />
+        <DualSectionProjectCard
+        title1="Planning"
+        description1="There are many variations of the passages of lorem Ipsum from available, majority."
+        icon1="<path d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01' />"
+        title2="Execution"
+        description2=" There are many "
+        icon2="<path d='M13 10V3L4 14h7v7l9-11h-7z' />"
+      />
+    
    
      
     </div>

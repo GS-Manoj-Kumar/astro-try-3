@@ -1,0 +1,36 @@
+---
+const { 
+  title1, 
+  description1, 
+  title2, 
+  description2, 
+  icon1 = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm1 10h3m-6 4h.01M12 6.75v6.25" />`,
+  icon2 = icon1
+} = Astro.props;
+
+---
+<div class="max-w-xs m-2 bg-gray-100 rounded-xl shadow-md md:max-w-xs border-x-2 border-gray-400 min-h-96">
+  <div class="p-4">
+    <div class="flex flex-col items-center">
+      <div class="bg-red-600 rounded-full p-4 m-2">
+        <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={icon1}></svg>
+      </div>
+      <h3 class="text-center text-lg font-semibold">{title1}</h3>
+      <p class="text-center mt-2 text-gray-600 inside-body-text">
+        {description1}
+      </p>
+    </div>
+    
+    <div class="border-t-2 border-gray-300 my-4"></div>
+    
+    <div class="flex flex-col items-center">
+      <div class="bg-red-600 rounded-full p-4 mb-4">
+        <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={icon2}></svg>
+      </div>
+      <h3 class="text-center text-lg font-semibold">{title2}</h3>
+      <p class="text-center mt-2 text-gray-600 inside-body-text">
+        {description2}
+      </p>
+    </div>
+  </div>
+</div>

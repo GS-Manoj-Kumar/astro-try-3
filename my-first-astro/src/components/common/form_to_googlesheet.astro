@@ -1,0 +1,176 @@
+---
+const { formId = 'new-form' } = Astro.props;
+---
+<!-- <form class=" rounded-badge sm:scale-75  ">
+<div class="shadow- p-2 rounded-badge">
+
+	<div class="mb-2">
+		<input type="text" placeholder="Name" class="w-full p-2 rounded-md bg-red-200 placeholder-gray-500 hover:scale-9 ">
+	</div>
+	<div class="mb-2">
+		<input type="text" placeholder="Phone" class="w-full p-2 rounded-md bg-red-200 placeholder-gray-500 hover:scale-9">
+	</div>
+	<div class="mb-2">
+		<input type="email" placeholder="Email" class="w-full p-2 rounded-md bg-red-200 placeholder-gray-500 hover:scale-9">
+	</div>
+	<div class="mb-2">
+		<input type="text" placeholder="Pincode" class="w-full p-2 rounded-md bg-red-200 placeholder-gray-500 hover:scale-9">
+	</div>
+
+	<hr>
+
+	<div class="mb-2 flex flex-col "> 
+
+		<div class=" shrink-0 ">
+			<label class="block text-gray-700">Service</label>
+			<div class="bg-rose-400 rounded-md p-2  ">
+				<label class="block"><input type="radio" name="service" value="move in" class="mr-1  hover:scale-75 "> Move In</label><hr>
+				<label class="block"><input type="radio" name="service" value="rent out" class="mr-1 hover:scale-75"> Rent Out</label><hr>
+				<label class="block"><input type="radio" name="service" value="renovate" class="mr-1 hover:scale-75"> Renovate</label><hr>
+				<label class="block"><input type="radio" name="service" value="renovate" class="mr-1 hover:scale-75"> others</label>
+			</div>
+		</div>
+
+
+		<div class=" shrink-0">
+			<label class="block text-gray-700 ">Property Type</label>
+			<div class="bg-rose-400 rounded-md p-2">
+				<label class="block"><input type="radio" name="property" value="apartment" class="mr-1 hover:scale-75 "> Apartment</label><hr>
+				<label class="block"><input type="radio" name="property" value="villa" class="mr-1 hover:scale-75"> Villa</label><hr>
+				<label class="block whitespace-normal  "><input type="radio" name="property" value="independent house" class="mr-1 hover:scale-75"> Independent House</label><hr>
+				<label class="block"><input type="radio" name="property" value="others" class="mr-1 hover:scale-75"> Others</label>
+			</div>
+		</div>
+
+	</div>
+	<hr>
+	<div class="mb-2 flex space-x-2 ">
+	  <div class="w-1/2">
+		<label class="w-full text-gray-700">Start Date</label>
+		<select class="w-full p-2 rounded-md bg-red-200">
+			<option>Immediately</option>
+			<option>Within a month</option>
+			<option>Within 2 months</option>                                  
+			<option>Within 3 months</option>
+			<option>More than 3 months</option>
+		</select>
+		</div>
+		<div class="w-1/2 ">
+		<label class="w-full text-gray-700">Budget</label>
+		<select class="w-full p-2 rounded-md bg-red-200">
+			<option>under 7 lacs</option>
+			<option>7 - 10 lacs</option>
+			<option>10 - 15 lacs </option>                                  
+			<option>15 - 20 lacs</option>
+			<option>above 20lacs</option>
+		</select>
+		</div>
+	</div>
+	<div class="flex space-x-2">
+		<button type="reset" class="w-1/3 p-2 bg-red-500 hover:scale-90 text-white rounded-md">Reset</button>
+		<button type="submit" class="w-2/3 p-2 bg-green-500 hover:scale-90 text-white rounded-md">Submit</button>
+	</div>
+  </div>
+  </form> -->
+
+  
+  <form class="rounded-badge sm:scale-75" id={formId}>
+    <div class="shadow p-2 rounded-badge">
+        <div id={`res-${formId}`} class="text-green-700"></div>
+        <div class="mb-2">
+            <input type="text" placeholder="Name" name="Name" required class="w-full p-2 rounded-md bg-red-200 placeholder-gray-500 hover:scale-9">
+        </div>
+        <div class="mb-2">
+            <input type="text" placeholder="Phone" name="Phone" required class="w-full p-2 rounded-md bg-red-200 placeholder-gray-500 hover:scale-9">
+        </div>
+        <div class="mb-2">
+            <input type="email" placeholder="Email" name="Email" required class="w-full p-2 rounded-md bg-red-200 placeholder-gray-500 hover:scale-9">
+        </div>
+        <div class="mb-2">
+            <input type="text" placeholder="Pincode" name="Pincode" required class="w-full p-2 rounded-md bg-red-200 placeholder-gray-500 hover:scale-9">
+        </div>
+        <hr>
+        <div class="mb-2 flex flex-col">
+            <div class="shrink-0">
+                <label class="block text-gray-700">Service</label>
+                <div class="bg-rose-400 rounded-md p-2">
+                    <label class="block"><input type="radio" name="Service" value="move in" required class="mr-1 hover:scale-75"> Move In</label><hr>
+                    <label class="block"><input type="radio" name="Service" value="rent out" required class="mr-1 hover:scale-75"> Rent Out</label><hr>
+                    <label class="block"><input type="radio" name="Service" value="renovate" required class="mr-1 hover:scale-75"> Renovate</label><hr>
+                    <label class="block"><input type="radio" name="Service" value="others" required class="mr-1 hover:scale-75"> Others</label>
+                </div>
+            </div>
+            <div class="shrink-0">
+                <label class="block text-gray-700">Property Type</label>
+                <div class="bg-rose-400 rounded-md p-2">
+                    <label class="block"><input type="radio" name="Property" value="apartment" required class="mr-1 hover:scale-75"> Apartment</label><hr>
+                    <label class="block"><input type="radio" name="Property" value="villa" required class="mr-1 hover:scale-75"> Villa</label><hr>
+                    <label class="block whitespace-normal"><input type="radio" name="Property" value="independent house" required class="mr-1 hover:scale-75"> Independent House</label><hr>
+                    <label class="block"><input type="radio" name="Property" value="others" required class="mr-1 hover:scale-75"> Others</label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="mb-2 flex space-x-2">
+            <div class="w-1/2">
+                <label class="w-full text-gray-700">Start Date</label>
+                <select name="StartDate" required class="w-full p-2 rounded-md bg-red-200">
+                    <option value="Immediately">Immediately</option>
+                    <option value="Within a month">Within a month</option>
+                    <option value="Within 2 months">Within 2 months</option>                                  
+                    <option value="Within 3 months">Within 3 months</option>
+                    <option value="More than 3 months">More than 3 months</option>
+                </select>
+            </div>
+            <div class="w-1/2">
+                <label class="w-full text-gray-700">Budget</label>
+                <select name="Budget" required class="w-full p-2 rounded-md bg-red-200">
+                    <option value="under 7 lacs">under 7 lacs</option>
+                    <option value="7 - 10 lacs">7 - 10 lacs</option>
+                    <option value="10 - 15 lacs">10 - 15 lacs</option>                                  
+                    <option value="15 - 20 lacs">15 - 20 lacs</option>
+                    <option value="above 20 lacs">above 20 lacs</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex space-x-2">
+            <button type="reset" class="w-1/3 p-2 bg-red-500 hover:scale-90 text-white rounded-md">Reset</button>
+            <button type="submit" class="w-2/3 p-2 bg-green-500 hover:scale-90 text-white rounded-md">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+
+<script define:vars={{ formId }}>
+let url = "https://script.google.com/macros/s/AKfycbyDg-Fnce5ELEmOnXxmTmazdwkjRZEgPNYp0QS6Ihv8HXtvIuH-geRKeA9qOT1L8Sa6/exec";
+  let form = document.getElementById(formId);
+  
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let submitButton = e.target.querySelector('button[type="submit"]');
+      submitButton.innerHTML = "Submitting...";
+
+      let formData = new FormData(form);
+      fetch(url, {
+        method: "post",
+        body: formData,
+      }).then((res) => res.text())
+      .then((response) => {
+        submitButton.innerHTML = "Submitted";
+        let resElement = document.getElementById(`res-${formId}`);
+        if (resElement) {
+          resElement.innerHTML = response;
+        }
+      }).catch((error) => {
+        console.error('Error:', error);
+        submitButton.innerHTML = "Submit";
+        let resElement = document.getElementById(`res-${formId}`);
+        if (resElement) {
+          resElement.innerHTML = 'Submission failed. Please try again.';
+        }
+      });
+    });
+  }
+</script>

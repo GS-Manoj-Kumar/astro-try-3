@@ -1,5 +1,5 @@
 ---
-import FORM from "../common/simpleform.astro"
+import FORM from "../common/form_to_googlesheet.astro"
 
 ---
 
@@ -18,7 +18,7 @@ import FORM from "../common/simpleform.astro"
             
             
             <div class="relative  w-1/2  ">
-                <FORM />
+                <FORM formId="modal-form-desktop" />
                 <button id="closeModalBtn" class=" aspect-square w-8 h-8  bg-red-500 text-white rounded absolute -top-0 -right-0 ">X</button>
             </div>
 
@@ -28,14 +28,14 @@ import FORM from "../common/simpleform.astro"
         
         
         <div class="hidden max-md:block relative scale-90 bg-rose-300 w-full ">
-            <FORM />
+            <FORM formId="modal-form-mobile"/>
             <button id="closeModalBtnmobo" class=" aspect-square w-6 h-6 bg-red-500 text-white rounded absolute -top-7 -right-4 z-50">X</button>
         </div>
            
         
     </dialog>
 
-    <script>
+    <script >
        // @ts-nocheck
         // Get the modal element
         const modal = document.getElementById('myModal');
@@ -50,11 +50,14 @@ import FORM from "../common/simpleform.astro"
 
         // When the user clicks the button, open the modal
         openModalBtn.addEventListener('click', () => {
-            modal.showModal();
-        });
-        openModalBtnMobile.addEventListener('click', () => {
         modal.showModal();
         });
+
+        if (openModalBtnMobile) {
+        openModalBtnMobile.addEventListener('click', () => {
+            modal.showModal();
+        });
+        }
      
 
         // When the user clicks the button, close the modal
