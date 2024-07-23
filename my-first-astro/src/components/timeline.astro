@@ -1,18 +1,17 @@
 
 
 
-<!-- ---
+---
 
 
-const steps = [
-  { id: 'step1', text: 'Meet Us', img: '../assets/hero/bg.jpg' },
-  { id: 'step2', text: 'Finalise', img: '../assets/hero/bg.jpg' },
-  { id: 'step3', text: 'Production', img: '../assets/hero/bg.jpg' },
-  { id: 'step4', text: 'Installation', img: '../assets/hero/bg.jpg' },
-  { id: 'step5', text: 'Handover', img: '../assets/hero/bg.jpg' }
-];
 
---- -->
+import { Image } from 'astro:assets';
+import meetUsImage from '../assets/timeline/1.jpg';
+import Design from '../assets/timeline/2.jpg';
+import Production from '../assets/timeline/3.jpg';
+import Installation from '../assets/timeline/4.jpg';
+import handover from '../assets/timeline/5.jpg';
+--- 
 
 
 
@@ -56,28 +55,48 @@ const steps = [
         <div id="carousel" class="relative h-80 ">
 
           <div id="step1" class="carousel-item active absolute inset-x-0 inset-y-4">
-            <h2 class="text-2xl font-bold text-center bg-red-400 text-white">Meet</h2>
-            <img src="https://via.placeholder.com/400x200?text=Meet+Us" alt="Meet Us" class="w-full h-full object-cover">
+            <h2 class="text-2xl font-bold text-center bg-red-400 text-white">Meet a Designer</h2>
+            <Image 
+            src={meetUsImage} 
+            alt="Meet Us" 
+            class="w-full h-full object-cover"
+          />
           </div>
 
           <div id="step2" class="carousel-item absolute  inset-x-0 inset-y-4">
-            <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Finalise</h2>
-            <img src="https://via.placeholder.com/400x200?text=Finalise" alt="Finalise" class="w-full h-full object-cover">
+            <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Design</h2>
+            <Image 
+            src={Design} 
+            alt="Design" 
+            class="w-full h-full object-cover"
+          />
           </div>
 
           <div id="step3" class="carousel-item absolute inset-x-0 inset-y-4">
             <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Production</h2>
-            <img src="https://via.placeholder.com/400x200?text=Production" alt="Production" class="w-full h-full object-cover">
+            <Image 
+              src={Production} 
+              alt="Production" 
+              class="w-full h-full object-cover"
+            />
           </div>
 
           <div id="step4" class="carousel-item absolute inset-x-0 inset-y-4">
             <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Installation</h2>
-            <img src="https://via.placeholder.com/400x200?text=Installation" alt="Installation" class="w-full h-full object-cover">
+            <Image 
+            src={Installation} 
+            alt="Installation" 
+            class="w-full h-full object-cover"
+          />
           </div>
 
           <div id="step5" class="carousel-item absolute inset-x-0 inset-y-4">
             <h2 class="text-2xl font-bold text-center  bg-red-400 text-white">Handover</h2>
-            <img src="https://via.placeholder.com/400x200?text=Handover" alt="Handover" class="w-full h-full object-cover">
+            <Image 
+            src={handover} 
+            alt="Handover" 
+            class="w-full h-full object-cover"
+          />
           </div>
 
         </div>

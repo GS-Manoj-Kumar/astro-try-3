@@ -1,6 +1,13 @@
 ---
 
 import Card from './cards/testimonial_card.astro';
+import { Image } from 'astro:assets';
+import person1 from '../assets/testimonial/01.png'; 
+import person2 from '../assets/testimonial/02.png'; 
+import person3 from '../assets/testimonial/03.png'; 
+import work1 from '../assets/work/03.png'; 
+import work2 from '../assets/work/02.png'; 
+import work3 from '../assets/work/03.png'; 
 
 ---
 
@@ -16,10 +23,32 @@ import Card from './cards/testimonial_card.astro';
 
 
     <div class="grid grid-cols-1 lg:grid-cols-3 :grid-cols-2 gap-10 overflow-x-auto">
-      <Card name="Mridliprasad" title="idli founder" image="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" personimage='https://tailwindcss.com/img/jonathan.jpg' content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" />
-      <Card name="Mridliprasad" title="idli founder" image="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" personimage='https://tailwindcss.com/img/jonathan.jpg' content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" />
-      <Card name="Mridliprasad" title="idli founder" image="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" personimage='https://tailwindcss.com/img/jonathan.jpg' content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" />
+      <Card 
+      name="Mridliprasad" 
+      title="idli founder" 
+      interiorimage={work1}
+      personimage={person1} 
+      Content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" 
+    />
+      
 
+      <Card 
+      name="Mridliprasad" 
+      title="idli founder" 
+      interiorimage={work2}
+      personimage={person2} 
+      Content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" 
+    />
+      
+
+      <Card 
+      name="Mridliprasad" 
+      title="idli founder" 
+      interiorimage={work3}
+      personimage={person3} 
+      Content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" 
+    />
+      
     </div>
   </div>
 </div>
