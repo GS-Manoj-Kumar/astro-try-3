@@ -3,6 +3,7 @@
 
 import Card from './cards/services_card.astro';
 import { Image } from 'astro:assets';
+import bedroomimage from '../assets/services/bedroom.png';
 import bedroomSvgSrc from '../assets/services/rectangle-xmark.png';
 import { createAnimationScope } from 'astro:transitions';
 
@@ -34,22 +35,22 @@ const civilItems = ["electrical", "painting", "plumbing", "false ceiling", "demo
       </div>
     </div>
     <div class="bg-orange-20 col-span-4 row-span-4 col-start-1 row-start-4 border-2 border-gray-400 rounded-badge  "> 
-      <Card title="BEDROOM" items={bedroomItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg1} />
+      <Card title="BEDROOM" items={bedroomItems} svgSrc={bedroomimage} titlebg={titlebg1} />
     </div>
     <div class="bg-green-20 col-span-4 row-span-4 col-start-5 row-start-4 border-2 border-gray-400 rounded-badge">
-      <Card title="LIVING" items={livingItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg2}/>
+      <Card title="LIVING" items={livingItems} svgSrc={bedroomimage} titlebg={titlebg2}/>
     </div>
     <div class="bg-red-20 col-span-4 row-span-4 col-start-1 row-start-8 border-2 border-gray-400 rounded-badge">
-      <Card title="FURNITURE" items={furnitureItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg3}/>
+      <Card title="FURNITURE" items={furnitureItems} svgSrc={bedroomimage} titlebg={titlebg3}/>
     </div>
     <div class="bg-yellow-20 col-span-4 row-span-4 col-start-5 row-start-8 border-2 border-gray-400 rounded-badge">
-      <Card title="DECOR" items={decorItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg4}/>
+      <Card title="DECOR" items={decorItems} svgSrc={bedroomimage} titlebg={titlebg4}/>
     </div>
     <div class="bg-fuchsia-20 col-span-4 row-span-5 col-start-9 row-start-2 border-2 border-gray-400 rounded-badge">
-      <Card title="KITCHEN" items={kitchenItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg5}/>
+      <Card title="KITCHEN" items={kitchenItems} svgSrc={bedroomimage} titlebg={titlebg5}/>
     </div>
     <div class="bg-blue-20 col-span-4 row-span-5 col-start-9 row-start-7 rounded-badge border-2 border-gray-400">
-      <Card title="CIVIL WORKS" items={civilItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg6}/>
+      <Card title="CIVIL WORKS" items={civilItems} svgSrc={bedroomimage} titlebg={titlebg6}/>
     </div>
   </div>
     
@@ -62,12 +63,12 @@ const civilItems = ["electrical", "painting", "plumbing", "false ceiling", "demo
         </h2>
       </div>
     </div>
-    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="BEDROOM" items={bedroomItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg1} /></div>
-    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge "><Card title="LIVING" items={livingItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg2}/></div>
-    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="FURNITURE" items={furnitureItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg3}/></div>
-    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="DECOR" items={decorItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg4}/></div>
-    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="KITCHEN" items={kitchenItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg5}/></div>
-    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="CIVIL WORKS" items={civilItems} svgSrc={bedroomSvgSrc.src} titlebg={titlebg6}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="BEDROOM" items={bedroomItems} svgSrc={bedroomimage} titlebg={titlebg1} /></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge "><Card title="LIVING" items={livingItems} svgSrc={bedroomimage} titlebg={titlebg2}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="FURNITURE" items={furnitureItems} svgSrc={bedroomimage} titlebg={titlebg3}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="DECOR" items={decorItems} svgSrc={bedroomimage} titlebg={titlebg4}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="KITCHEN" items={kitchenItems} svgSrc={bedroomimage} titlebg={titlebg5}/></div>
+    <div class=" bg-rose-200 border-2 border-gray-400 rounded-badge"><Card title="CIVIL WORKS" items={civilItems} svgSrc={bedroomimage} titlebg={titlebg6}/></div>
   </div>
   
 

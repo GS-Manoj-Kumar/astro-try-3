@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 
 
 const { title, items, svgSrc, titlebg } = Astro.props ;
@@ -33,7 +35,7 @@ const { title, items, svgSrc, titlebg } = Astro.props ;
       ))}
     </ul>
     <div class="m-4 self-center justify-self-end">
-        <img class="w-16 h-16" src={svgSrc} alt="{title} icon" />
+        <Image class="w-16 h-16" src={svgSrc} alt="{title} icon" class="aspect-square object-cover"/>
     </div>
  
   </div>
