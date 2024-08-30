@@ -1,63 +1,58 @@
 ---
-
 import Card from './cards/testimonial_card.astro';
-import { Image } from 'astro:assets';
 import person1 from '../assets/testimonial/01.png'; 
 import person2 from '../assets/testimonial/02.png'; 
 import person3 from '../assets/testimonial/03.png'; 
-import work1 from '../assets/work/03.webp'; 
-import work2 from '../assets/work/02.webp'; 
+import work1 from '../assets/work/05.webp'; 
+import work2 from '../assets/work/06.webp'; 
 import work3 from '../assets/work/03.webp'; 
 
+// Array of testimonial data
+const testimonials = [
+  {
+    name: 'Mridliprasad',
+    title: 'idli founder',
+    interiorimage: work1,
+    personimage: person1,
+    content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam'
+  },
+  {
+    name: 'Mridliprasad',
+    title: 'idli founder',
+    interiorimage: work2,
+    personimage: person2,
+    content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam'
+  },
+  {
+    name: 'Mridliprasad',
+    title: 'idli founder',
+    interiorimage: work3,
+    personimage: person3,
+    content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam'
+  }
+];
 ---
 
 <section class="min-h-svh w-full bg-red-100">
-<div class="flex flex-col gap-">
-    <div class=" head-text mt-7 ">
-      <h1 class="text-center font-extrabold leading-snug ">What Our Customers Say </h1>
-      <h2 class="text-center head2-text">There are many variations of the passages  
-      </h2>
+  <div class="flex flex-col gap-">
+    <div class="head-text mt-7">
+      <h1 class="text-center font-extrabold leading-snug">What Our Customers Say</h1>
+      <h2 class="text-center head2-text">There are many variations of the passages</h2>
     </div>
 
-  <div class="max-w-screen-xl mx-auto p-5 sm:p-5 md:p-10">
-
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 :grid-cols-2 gap-10 overflow-x-auto">
-      <Card 
-      name="Mridliprasad" 
-      title="idli founder" 
-      interiorimage={work1}
-      personimage={person1} 
-      Content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" 
-    />
-      
-
-      <Card 
-      name="Mridliprasad" 
-      title="idli founder" 
-      interiorimage={work2}
-      personimage={person2} 
-      Content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" 
-    />
-      
-
-      <Card 
-      name="Mridliprasad" 
-      title="idli founder" 
-      interiorimage={work3}
-      personimage={person3} 
-      Content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat quibusdam a impedit, ipsam" 
-    />
-      
+    <div class="max-w-screen-xl mx-auto p-5 sm:p-5 md:p-10">
+      <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-10 overflow-x-auto">
+        {testimonials.map((testimonial, index) => (
+          <Card
+            key={index}
+            name={testimonial.name}
+            title={testimonial.title}
+            interiorimage={testimonial.interiorimage}
+            personimage={testimonial.personimage}
+            Content={testimonial.content}
+          />
+        ))}
+      </div>
     </div>
   </div>
-</div>
- 
 </section>
-
-
-
-<script>
-  //@ts-nocheck
-
-</script>

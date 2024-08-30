@@ -1,0 +1,15 @@
+---
+// Define props
+
+
+const { title, items } = Astro.props;
+---
+
+<div class="bg-red-200 p-4 rounded-md shadow">
+    <h3 class="font-semibold mb-2">{title}</h3>
+    <ul class="list-decimal ml-4">
+        {items.map((item) => (
+            <li>{item}</li>
+        ))}
+    </ul>
+</div>

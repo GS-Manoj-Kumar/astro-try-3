@@ -2,18 +2,20 @@
 // src/pages/index.astro
 import '../styles/tailwind.css';
 import HeroSection from '../components/hero.astro';
-import HerotestSection from '../components/herotest.astro';
+
 import NavBar from '../components/navbar.astro';
 import FeaturesSection from '../components/features.astro';
 import TimelineSection from '../components/timeline.astro';
-import Timelinetest from '../components/timeline_test.astro';
+
 import ServicesSection from '../components/services.astro';
 import TestimonialsSection from '../components/testimonial.astro';
 import PricingSection from '../components/pricing.astro';
 import FAQSection from '../components/faq.astro';
 import FooterSection from '../components/footer.astro';
-import FormSection from '../components/common/form_to_googlesheet.astro';
+
 import Modal from '../components/modal/modal1.astro';
+import HomeImages from '../components/home_images.astro';
+import Scoll from '../components/scoll.astro';
 
 ---
 
@@ -29,21 +31,23 @@ import Modal from '../components/modal/modal1.astro';
       <NavBar />
     
       <HeroSection />
-      <!-- <HerotestSection /> -->
+
   
    
 
     <FeaturesSection />
-    
+   
   
     <TimelineSection />
-    <Timelinetest />
+   
     <ServicesSection />
     <TestimonialsSection />
+    
     <!-- <PricingSection /> -->
     <FAQSection />
+    <HomeImages/>
+    <!-- <Scoll/> -->
     <FooterSection />
-    <!-- <FormSection /> -->
-    <!-- <Modal /> -->
+ 
   </body>
 </html>

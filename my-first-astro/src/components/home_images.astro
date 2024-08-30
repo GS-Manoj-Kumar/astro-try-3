@@ -1,0 +1,30 @@
+---
+const images = [
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 1' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 2' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 3' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 3' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 3' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 3' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 3' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 3' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 3' },
+  { imageUrl: 'https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600', title: 'Image 3' },
+  // Add more images as needed
+];
+---
+
+<section class="min-h-50svh w-full px-4 py-16 ">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-semibold">Recent Projects</h2>
+    <a href="/gallery" class="text-sm border border-gray-500 px-4 py-2 rounded-md">View All Projects</a>
+  </div>
+
+  <div class="overflow-x-scroll whitespace-nowrap">
+    {images.map((image, index) => (
+      <div class="inline-block w-[90%] md:w-[30%] max-w-xs md:max-w-sm mx-2">
+        <img src={image.imageUrl} alt={image.title} class="w-full rounded-lg" />
+      </div>
+    ))}
+  </div>
+</section>

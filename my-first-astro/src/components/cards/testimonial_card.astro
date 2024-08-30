@@ -1,38 +1,33 @@
 ---
 import { Image } from 'astro:assets';
 
-
-const { name, title, Content , interiorimage ,personimage } = Astro.props ;
+const { name, title, Content, interiorimage, personimage } = Astro.props;
 ---
-    
-    <div class="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-red-200 rounded-badge flex flex-col leading-normal overflow-clip">
-       <div>
-        <Image src={interiorimage} alt="client house image" class="w-full h-fit object-cover"/>
-       </div>
-      <!-- <Image src={interiorimage} alt="client house image" class="w-full h-fit "/> -->
-        
-    
-             <p class="bg-red-00 align-baseline grow text-black text-left p-4 max-md:prose-xs md:prose-sm lg:prose-sm ">{Content}</p>
-  
-  
-            <div class="flex bg-red-00 gap-2 rounded p-4 items-center ">
-  
-              <div class=" w-12 h-12 relative border-1 border-white rounded-full overflow-hidden ml-2">
-                <Image 
+
+<div class="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-red-200 rounded-badge flex flex-col leading-normal overflow-clip">
+    <div class="h-48"> <!-- Set a fixed height for the image container -->
+        <Image src={interiorimage} alt="client house image" class="w-full h-full object-cover"/>
+    </div>
+
+    <p class="align-baseline grow text-black text-left p-4 max-md:prose-xs md:prose-sm lg:prose-sm">
+        {Content}
+    </p>
+
+    <div class="flex gap-2 rounded p-4 items-center">
+        <div class="w-12 h-12 relative border-1 border-white rounded-full overflow-hidden ml-2">
+            <Image 
                 src={personimage} 
                 alt="client image"
                 class="object-cover h-12 w-12"
                 width={48} 
                 height={48}
-              />
-              </div>
-        
-              <div class="text-center  ">
-                <p class="text-left text-black inside-body-text font-semibold ">{name}</p>
-                <p class="text-left text-black inside-body-text font-normal ">{title}</p>
-              </div>
-  
-            </div>
-      
+            />
+        </div>
+
+        <div class="text-center">
+            <p class="text-left text-black inside-body-text font-semibold ">{name}</p>
+            <p class="text-left text-black inside-body-text font-normal ">{title}</p>
+        </div>
     </div>
+</div>
   

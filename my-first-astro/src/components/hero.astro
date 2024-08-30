@@ -12,11 +12,11 @@ import Conceptimg from '../assets/work/06.webp';
 ---
 
 
-<section class="bg-zinc-00 h-hero w-full">
+<section class="bg-zinc-00 h-hero w-full"  aria-labelledby="hero-title">
   <div class="hidden md:grid md:grid-cols-12 md:grid-rows-12 md:h-full md:w-full bg-slate-00">
     
     <div id="hero_img" class="row-span-12 col-span-9 row-start-1 col-start-1 rounded-r-[6rem] overflow-clip " >
-      <img src={Defaultimg.src} alt="Hero Image" class="w-full h-full object-cover" id='myImg'  >
+      <img src={Defaultimg.src} alt="Hero Image" class="w-full h-full object-cover" id='myImg' aria-describedby="hero-description" >
 
     </div>
 
@@ -29,16 +29,15 @@ import Conceptimg from '../assets/work/06.webp';
       
     </div>
     
-    <div class="col-span-6 row-span-2 col-start-1 row-start-11 bg-slate-00" id="buttons overflow-clip ">
-      <div class="flex flex-row justify-stretch gap-6 p-1">
-
-        <button id="button1" class="bg-red-300  bg-opacity-100 border-2 border-red-400 rounded-lg text-md text-black font-extrabold py-2 px-4 hover:bg-red-400  ">Concept</button>
-        <button id="button2" class="bg-red-300  bg-opacity-100 border-2 border-red-400 rounded-lg text-md text-black font-extrabold py-2 px-4 hover:bg-red-400  ">Drawing</button>
-        <button id="button3" class="bg-red-300  bg-opacity-100 border-2 border-red-400 rounded-lg text-md text-black font-extrabold py-2 px-4 hover:bg-red-400  ">Actual</button>
+    <div class="col-span-6 row-span-2 col-start-1 row-start-11 bg-slate-00" id="buttons overflow-clip">
+      <div class="flex flex-row justify-stretch gap-6 p-1" role="group" aria-labelledby="button-group">
+        <button id="button1" class="bg-red-300 bg-opacity-100 border-2 border-red-400 rounded-lg text-md text-black font-extrabold py-2 px-4 hover:bg-red-400" aria-label="Concept">Concept</button>
+        <button id="button2" class="bg-red-300 bg-opacity-100 border-2 border-red-400 rounded-lg text-md text-black font-extrabold py-2 px-4 hover:bg-red-400" aria-label="Drawing">Drawing</button>
+        <button id="button3" class="bg-red-300 bg-opacity-100 border-2 border-red-400 rounded-lg text-md text-black font-extrabold py-2 px-4 hover:bg-red-400" aria-label="Actual">Actual</button>
       </div>
     </div>
 
-     <div class="col-span-8 row-span-5 col-start-1 row-start-1 bg-slate-00 p-4 z-10" id="typo_graph">
+     <div class="col-span-8 row-span-5 col-start-1 row-start-1 bg-slate-00 p-4 z-10" id="typo_graph" aria-labelledby="hero-text">
        
   
                     <div class="text-left prose max-sm:prose-sm md:prose-lg lg:prose-xl">
@@ -57,7 +56,7 @@ DESIGNERS IN BANGALORE</h4>
    <div class="hidden max-md:grid max-md:grid-cols-12 max-md:grid-rows-12 max-md:h-full max-md:w-full bg-slate-100">
 
     <div id="hero_img" class="row-span-12 col-span-12 row-start-1 col-start-1  overflow-clip  rounded-b-badge" >
-      <img src={Defaultimg.src} alt="Hero Image" class="w-full h-full object-cover" id='myImgmobo'  >
+      <img src={Defaultimg.src} alt="Hero Image" class="w-full h-full object-cover" id='myImgmobo' aria-describedby="hero-description" >
 
     </div>
   
@@ -69,7 +68,7 @@ DESIGNERS IN BANGALORE</h4>
      </div>
   
 
-    <div class="col-span-12 row-span-5 col-start-1 row-start-1 bg-slate-00 p-4" id="typo_graph">
+    <div class="col-span-12 row-span-5 col-start-1 row-start-1 bg-slate-00 p-4" id="typo_graph"  aria-labelledby="hero-text">
        
   
                     <div class="text-left max-sm:prose-sm prose md:prose-lg lg:prose-xl">
@@ -84,21 +83,11 @@ DESIGNERS IN BANGALORE</h4>
     
 
     
-  
-  
-
-
-    <div class="col-span-1 row-span-1 col-start-1  row-start-6 " id="buttons  ">
-      <div class="flex justify-start gap-4 rotate-90">
-      
-
-         <button id="button4" class="bg-red-200  bg-opacity-60 border-2 border-red-400 rounded-t-lg text-md text-black font-extrabold py-2 px-2  hover:bg-red-300 hover:-translate-y-2 ">Concept</button>
-      
-         <button  id="button5" class="bg-red-200  bg-opacity-60 border-2 border-red-400 rounded-t-lg text-md text-black font-extrabold py-2 px-2 hover:bg-red-300  hover:-translate-y-2">Drawing</button>
-      
-         <button id="button6" class="bg-red-200  bg-opacity-60 border-2 border-red-400 rounded-t-lg text-md text-black font-extrabold py-2 px-2 hover:bg-red-300  hover:-translate-y-2">Render</button>
-     
-  
+      <div class="col-span-1 row-span-1 col-start-1 row-start-6" id="buttons" aria-labelledby="vertical-button-group">
+      <div class="flex justify-start gap-4 rotate-90" role="group" aria-labelledby="vertical-buttons">
+        <button id="button4" class="bg-red-200 bg-opacity-60 border-2 border-red-400 rounded-t-lg text-md text-black font-extrabold py-2 px-2 hover:bg-red-300 hover:-translate-y-2" aria-label="Concept">Concept</button>
+        <button id="button5" class="bg-red-200 bg-opacity-60 border-2 border-red-400 rounded-t-lg text-md text-black font-extrabold py-2 px-2 hover:bg-red-300 hover:-translate-y-2" aria-label="Drawing">Drawing</button>
+        <button id="button6" class="bg-red-200 bg-opacity-60 border-2 border-red-400 rounded-t-lg text-md text-black font-extrabold py-2 px-2 hover:bg-red-300 hover:-translate-y-2" aria-label="Render">Render</button>
       </div>
     </div>
 

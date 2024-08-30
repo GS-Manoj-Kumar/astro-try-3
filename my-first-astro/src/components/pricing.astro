@@ -1,11 +1,50 @@
 ---
-// src/components/PricingSection.astro
+import Pricingsmallcard from "./cards/pricingsmallcard.astro";
+
+// Array of large cards with title, pricing, and smaller cards
+const largeCards = [
+  {
+    title: "Essential woodwork for a 2BHK",
+    pricing: "@7Lac",
+    cards: [
+      { title: "KITCHEN", items: ["Base unit - 100×75 cm", "OHS - 100×75 cm", "LOFT - 100×75 cm", "accessories - 100×75 cm"] },
+      { title: "MBR", items: ["wardrobe - 100×75 cm", "tvunit - 100×75 cm", "Dresser - 100×75 cm", "Study - 100×75 cm"] },
+      { title: "CBR", items: ["wardrobe - 100×75 cm", "tvunit - 100×75 cm", "Dresser - 100×75 cm", "Study - 100×75 cm"] },
+      { title: "HALL", items: ["foyr - 100×75 cm", "tvunit - 100×75 cm", "pooja - 100×75 cm", "partition - 100×75 cm"] }
+    ]
+  },
+  {
+    title: "Luxury woodwork for a 3BHK",
+    pricing: "@10Lac",
+    cards: [
+      { title: "KITCHEN", items: ["Base unit - 150×90 cm", "OHS - 150×90 cm", "LOFT - 150×90 cm", "accessories - 150×90 cm"] },
+      { title: "MBR", items: ["wardrobe - 150×90 cm", "tvunit - 150×90 cm", "Dresser - 150×90 cm", "Study - 150×90 cm"] },
+      { title: "CBR", items: ["wardrobe - 150×90 cm", "tvunit - 150×90 cm", "Dresser - 150×90 cm", "Study - 150×90 cm"] },
+      { title: "HALL", items: ["foyr - 150×90 cm", "tvunit - 150×90 cm", "pooja - 150×90 cm", "partition - 150×90 cm"] }
+    ]
+  }
+  // Add more large cards as needed
+];
 ---
 
 <section id="pricing" class="py-16">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-6 text-center">Pricing</h2>
-      <!-- Pricing content -->
-    </div>
-  </section>
-  
+  <div class="space-y-8 max-w-4xl mx-auto">
+    {largeCards.map(largeCard => (
+      <div class="bg-red-100 p-4 rounded-md shadow-lg">
+        <div class="bg-red-100 p-6 rounded-md">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold">{largeCard.title}</h2>
+                <span class="bg-red-400 text-white py-1 px-8 rounded-full">{largeCard.pricing}</span>
+            </div>
+            <hr class="border-t border-red-300 mb-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {largeCard.cards.map(card => (
+                <Pricingsmallcard title={card.title} items={card.items} />
+              ))}
+            </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
