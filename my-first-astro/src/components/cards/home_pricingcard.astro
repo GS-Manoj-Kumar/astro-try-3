@@ -1,0 +1,29 @@
+---
+const { bhk, tagline, title, pricing, cards, image } = Astro.props;
+---
+
+<div class="max-w-xs rounded-xl border border-gray-300 bg-gray-100 p-4 shadow-lg">
+  <div class="mb-2 flex items-center justify-between">
+    <h2 class="text-xl font-bold">{tagline}</h2>
+    <div class="flex space-x-2">
+      <span class="rounded-full bg-red-400 px-4 py-1 text-sm font-semibold text-white">{bhk}</span>
+      <span class="rounded-full bg-red-400 px-4 py-1 text-sm font-semibold text-white">{pricing}</span>
+    </div>
+  </div>
+  <p class="mb-4 text-sm text-gray-600 ">{title}</p>
+  <img src={image} alt={title} class="mb-4 h-40 w-full rounded-lg object-cover" />
+  <div class="mb-4 grid grid-cols-2">
+    {cards.map((card) => (
+      <div class="flex items-center space-x-2">
+        <svg class="h-4 w-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414L9 11.586l6.293-6.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        <span class="text-sm text-gray-700">{card.title}</span>
+      </div>
+    ))}
+  </div>
+  <a href="/pricing" class="w-full rounded-lg bg-red-400 py-2 font-semibold text-white transition duration-300 hover:bg-red-500 block text-center">
+    Know more
+  </a>
+  <!-- <button class="w-full rounded-lg bg-red-400 py-2 font-semibold text-white transition duration-300 hover:bg-red-500">Know more</button> -->
+</div>

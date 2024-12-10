@@ -1,0 +1,80 @@
+---
+// src/pages/index.astro or any other file where you want to use the Card component
+
+import Card from '../components/cards/home_pricingcard.astro';
+
+const cardsData = [
+  {
+    bhk: "2BHK",
+    tagline: "Essential",
+    title: "Essential woodwork for a 2BHK",
+    pricing: "@7Lac",
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600', // Update with the correct image path
+    cards: [
+      { title: "KITCHEN", items: ["Base unit - 100×75 cm", "OHS - 100×75 cm", "LOFT - 100×75 cm", "accessories - 100×75 cm"] },
+      { title: "MBR", items: ["wardrobe - 100×75 cm", "tvunit - 100×75 cm", "Dresser - 100×75 cm", "Study - 100×75 cm"] },
+      { title: "CBR", items: ["wardrobe - 100×75 cm", "tvunit - 100×75 cm", "Dresser - 100×75 cm", "Study - 100×75 cm"] },
+      { title: "HALL", items: ["foyr - 100×75 cm", "tvunit - 100×75 cm", "pooja - 100×75 cm", "partition - 100×75 cm"] }
+    ]
+  },
+  {
+    bhk: "3BHK",
+    tagline: "Luxury",
+    title: "Luxury woodwork for a 3BHK",
+    pricing: "@10Lac",
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600', // Update with the correct image path
+    cards: [
+      { title: "KITCHEN", items: ["Base unit - 150×90 cm", "OHS - 150×90 cm", "LOFT - 150×90 cm", "accessories - 150×90 cm"] },
+      { title: "MBR", items: ["wardrobe - 150×90 cm", "tvunit - 150×90 cm", "Dresser - 150×90 cm", "Study - 150×90 cm"] },
+      { title: "CBR", items: ["wardrobe - 150×90 cm", "tvunit - 150×90 cm", "Dresser - 150×90 cm", "Study - 150×90 cm"] },
+      { title: "HALL", items: ["foyr - 150×90 cm", "tvunit - 150×90 cm", "pooja - 150×90 cm", "partition - 150×90 cm"] }
+    ]
+  },
+  {
+    bhk: "3BHK",
+    tagline: "Luxury",
+    title: "Luxury woodwork for a 3BHK",
+    pricing: "@10Lac",
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600', // Update with the correct image path
+    cards: [
+      { title: "KITCHEN", items: ["Base unit - 150×90 cm", "OHS - 150×90 cm", "LOFT - 150×90 cm", "accessories - 150×90 cm"] },
+      { title: "MBR", items: ["wardrobe - 150×90 cm", "tvunit - 150×90 cm", "Dresser - 150×90 cm", "Study - 150×90 cm"] },
+      { title: "CBR", items: ["wardrobe - 150×90 cm", "tvunit - 150×90 cm", "Dresser - 150×90 cm", "Study - 150×90 cm"] },
+      { title: "HALL", items: ["foyr - 150×90 cm", "tvunit - 150×90 cm", "pooja - 150×90 cm", "partition - 150×90 cm"] }
+    ]
+  },
+  {
+    bhk: "3BHK",
+    tagline: "Luxury",
+    title: "Luxury woodwork for a 3BHK",
+    pricing: "@10Lac",
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600', // Update with the correct image path
+    cards: [
+      { title: "KITCHEN", items: ["Base unit - 150×90 cm", "OHS - 150×90 cm", "LOFT - 150×90 cm", "accessories - 150×90 cm"] },
+      { title: "MBR", items: ["wardrobe - 150×90 cm", "tvunit - 150×90 cm", "Dresser - 150×90 cm", "Study - 150×90 cm"] },
+      { title: "CBR", items: ["wardrobe - 150×90 cm", "tvunit - 150×90 cm", "Dresser - 150×90 cm", "Study - 150×90 cm"] },
+      { title: "HALL", items: ["foyr - 150×90 cm", "tvunit - 150×90 cm", "pooja - 150×90 cm", "partition - 150×90 cm"] }
+    ]
+  }
+];
+---
+<section class="min-h-70svh w-full px-4 py-16 bg-red-100 ">
+    <div class="flex justify-between items-center mb-8">
+        <div class=" head-text mt-7 ">
+            <h1 class="text-left font-extrabold leading-snug ">Pricing</h1>
+            <h2 class="text-left head2-text">There are many variations of the   
+            </h2>
+          </div>
+    </div>
+  
+    <div class="overflow-x-scroll whitespace-nowrap">
+        {cardsData.map((card) => (
+          <div class="inline-block w-[90%] md:w-[30%] max-w-xs  mx-2">
+            <Card {...card} />
+          </div>
+        ))}
+
+    </div>
+</section>
+
+  

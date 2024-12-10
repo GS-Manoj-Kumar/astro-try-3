@@ -16,3 +16,25 @@
   .marquee-container:hover .marquee-content {
     animation-play-state: paused;
   }
+  /* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(rgb(240, 127, 127)) var(rgb(240, 127, 127));
+
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(rgb(240, 127, 127));
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(rgb(240, 127, 127));
+  border-radius: 14px;
+  border: 3px solid var(--rgb(240, 127, 127));
+}
