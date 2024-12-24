@@ -6,17 +6,7 @@ export default {
 		height: {
 		  'hero': 'calc(100svh - 4rem)',
 		},
-		animation: {
-			// adjust speed according to your need
-			marquee: 'marquee 40s linear infinite',
-		  },
-		  keyframes: {
-			marquee: {
-			  '0%': { transform: 'translateX(100%)' },
-			  '100%': { transform: 'translateX(-200%)' },
-			}
-		  }
-
+		
 
 	  },
 	},

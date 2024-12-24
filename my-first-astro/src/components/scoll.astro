@@ -1,17 +1,95 @@
 ---
-// InfiniteLogoScroller.astro
+// src/components/CompanyMarquee.astro
+
+// Import company logo images
+import { Image } from 'astro:assets';
+import ebcoLogo from '../assets/brands/01.svg';
+import hettichLogo from '../assets/brands/02.svg';
+import hafeleLogo from '../assets/brands/03.svg';
+import blumLogo from '../assets/brands/04.svg';
+import merinoLogo from '../assets/brands/05.svg';
+import stylamLogo from '../assets/brands/03.svg';
+import advanceLamLogo from '../assets/brands/02.svg';
+
+const companies = [
+  { name: 'Ebco', logo: ebcoLogo },
+  { name: 'Hettich', logo: hettichLogo },
+  { name: 'Hafele', logo: hafeleLogo },
+  { name: 'Blum', logo: blumLogo },
+  { name: 'Merino', logo: merinoLogo },
+  { name: 'Stylam', logo: stylamLogo },
+  { name: 'Advance Lam', logo: advanceLamLogo }
+];
 ---
-<div class="overflow-hidden bg-gray-100 shadow-sm p-4">
-    <div class="marquee-content flex gap-4 items-center animate-marquee">
-      <div class="px-4 py-2 bg-blue-500 text-white rounded w-full">Breaking News</div>
-      <div class="px-4 py-2 bg-green-500 text-white rounded w-full">Stock Update</div>
-      <div class="px-4 py-2 bg-cyan-500 text-white rounded w-full">Weather Alert</div>
-      <div class="px-4 py-2 bg-yellow-500 text-black rounded w-full">Sports Scores</div>
-      <div class="px-4 py-2 bg-red-500 text-white rounded w-full">Traffic Report</div>
-      <div class="px-4 py-2 bg-purple-500 text-white rounded w-full">Tech Update</div>
-      <div class="px-4 py-2 bg-pink-500 text-white rounded w-full">Entertainment</div>
-      <div class="px-4 py-2 bg-indigo-500 text-white rounded w-full">Science News</div>
-      <div class="px-4 py-2 bg-teal-500 text-white rounded w-full">Health Tips</div>
-      <div class="px-4 py-2 bg-orange-500 text-white rounded w-full">Food & Dining</div>
+
+<div class="relative overflow-hidden bg-gray-100 shadow-sm">
+  <!-- Gradient Overlay - Left -->
+  <div class="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-gray-100 to-transparent z-10"></div>
+
+  <!-- Main marquee container -->
+  <div class="marquee-container">
+    <!-- Track for animation -->
+    <div class="marquee-track">
+      {companies.map(company => (
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-[200px] h-[100px] overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform">
+            <Image 
+              src={company.logo} 
+              alt={company.name}
+              width={200}
+              height={100}
+              class="w-full h-full object-contain p-2"
+            />
+          </div>
+          <span class="font-medium text-red-700">{company.name}</span>
+        </div>
+      ))}
+      {companies.map(company => (
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-[200px] h-[100px] overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform">
+            <Image 
+              src={company.logo} 
+              alt={company.name}
+              width={200}
+              height={100}
+              class="w-full h-full object-contain p-2"
+            />
+          </div>
+          <span class="font-medium text-gray-700">{company.name}</span>
+        </div>
+      ))}
     </div>
   </div>
+
+  <!-- Gradient Overlay - Right -->
+  <div class="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-gray-100 to-transparent z-10"></div>
+</div>
+
+<style>
+  .marquee-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 1.5rem 0;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    animation: scroll 30s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50%));
+    }
+  }
+
+  /* .marquee-track:hover {
+    animation-play-state: paused;
+  } */
+</style>
